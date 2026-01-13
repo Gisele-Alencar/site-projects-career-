@@ -118,8 +118,19 @@ export const Career: React.FC = () => {
               key={`${moment.id}-${index}`}
               className="flex-shrink-0 w-[280px] md:w-[320px] group"
             >
-              <div className="bg-black/60 backdrop-blur-md border border-white/10 p-2 mb-4 transition-all duration-300 group-hover:-translate-y-1">
-                <div className="aspect-[5/4] overflow-hidden">
+              {/* Card */}
+              <div
+                className="
+                  bg-black/50 backdrop-blur-xl
+                  border border-pink-500/60
+                  rounded-xl
+                  p-2 mb-4
+                  transition-all duration-150
+                  group-hover:-translate-y-1
+                  group-hover:border-pink-400
+                "
+              >
+                <div className="aspect-[5/4] overflow-hidden rounded-lg border border-pink-500/40">
                   <img
                     src={moment.imageUrl}
                     alt={moment.title}
@@ -129,16 +140,17 @@ export const Career: React.FC = () => {
                 </div>
               </div>
 
+              {/* Text */}
               <div className="px-2 text-white">
                 <div className="flex justify-between mb-2">
                   <h3 className="font-display text-lg uppercase">
                     {moment.title}
                   </h3>
-                  <span className="text-accent font-bold">
+                  <span className="text-pink-400 font-bold">
                     {moment.year}
                   </span>
                 </div>
-                <p className="text-xs text-white/70 border-l-2 border-accent/40 pl-2">
+                <p className="text-xs text-white/70 border-l-2 border-pink-400/50 pl-2">
                   {moment.description}
                 </p>
               </div>
