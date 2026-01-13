@@ -62,28 +62,29 @@ const moments: CareerMoment[] = [
     id: 9,
     title: 'Siará Tech Summit',
     year: '2025',
-    description: 'Auxiliando na captação de novos clientes para a Startup.',
+    description: 'Auxiliando na captação de novos clientes para a startup.',
     imageUrl: 'https://i.postimg.cc/7ZDrPp8R/Grid-Art-20251121-041437955.jpg',
   },
   {
     id: 10,
     title: 'International Space Apps Challenge',
     year: '2025',
-    description: 'Hackathon anual global para desenvolver soluções.',
+    description:
+      'Hackathon anual global para desenvolver soluções de problemas na Terra e no espaço.',
     imageUrl: 'https://i.postimg.cc/NfBdKYF7/Grid-Art-20251121-041814741.jpg',
   },
   {
     id: 11,
     title: 'Feira do Conhecimento',
     year: '2025',
-    description: 'Evento de tecnologia, criatividade e educação.',
+    description: 'Evento de encontros de tecnologia, criatividade e educação do Ceará.',
     imageUrl: 'https://i.postimg.cc/kMznC1gW/Grid-Art-20251121-041645080.jpg',
   },
   {
     id: 12,
     title: 'Cocoa Heads Fortaleza',
     year: '2025',
-    description: 'Ecossistema de desenvolvimento Apple.',
+    description: 'Voltado para o ecossistema de desenvolvimento da Apple.',
     imageUrl: 'https://i.postimg.cc/rF7CSkFm/Grid-Art-20251121-025533625-(1).jpg',
   },
 ];
@@ -94,11 +95,11 @@ export const Career: React.FC = () => {
   return (
     <section
       id="career"
-      className="py-16 md:py-24 border-b border-white/10 bg-black/80 backdrop-blur-xl overflow-hidden"
+      className="py-16 md:py-24 bg-black/80 backdrop-blur-md border-b border-white/10 overflow-hidden"
     >
       {/* Header */}
       <div className="container mx-auto px-8 md:px-16 mb-12">
-        <h2 className="font-display text-5xl md:text-6xl uppercase mb-2 text-transparent stroke-white">
+        <h2 className="font-display text-5xl md:text-6xl uppercase mb-2 text-white/40">
           Momento
         </h2>
         <h2 className="font-display text-5xl md:text-6xl uppercase text-white md:pl-12">
@@ -110,40 +111,34 @@ export const Career: React.FC = () => {
       </div>
 
       {/* Carousel */}
-      <div className="relative w-full flex overflow-hidden py-6">
-        <div className="<div className="flex w-max animate-scroll gap-8 md:gap-12 px-8">
+      <div className="relative w-full overflow-hidden py-4">
+        <div className="flex animate-scroll gap-8 md:gap-12 px-8">
           {carouselItems.map((moment, index) => (
             <div
               key={`${moment.id}-${index}`}
               className="flex-shrink-0 w-[280px] md:w-[320px] group"
             >
-              {/* Card */}
-              <div className="bg-black/50 backdrop-blur-xl border border-white/10 p-2 mb-4 rounded-xl
-                group-hover:-translate-y-2 transition-all duration-300
-                group-hover:border-pink-400/60
-                group-hover:shadow-[0_0_25px_rgba(236,72,153,0.35)]"
-              >
-                <div className="aspect-[5/4] overflow-hidden rounded-lg">
+              <div className="bg-black/60 backdrop-blur-md border border-white/10 p-2 mb-4 transition-all duration-300 group-hover:-translate-y-1">
+                <div className="aspect-[5/4] overflow-hidden">
                   <img
                     src={moment.imageUrl}
                     alt={moment.title}
+                    className="w-full h-full object-cover"
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
 
-              {/* Text */}
-              <div className="px-2">
-                <div className="flex justify-between items-baseline mb-2">
-                  <h3 className="font-display text-lg uppercase text-white group-hover:text-pink-400 transition-colors">
+              <div className="px-2 text-white">
+                <div className="flex justify-between mb-2">
+                  <h3 className="font-display text-lg uppercase">
                     {moment.title}
                   </h3>
-                  <span className="font-bold text-pink-400 text-lg">
+                  <span className="text-accent font-bold">
                     {moment.year}
                   </span>
                 </div>
-                <p className="text-xs text-white/70 leading-relaxed border-l-2 border-pink-400/40 pl-2">
+                <p className="text-xs text-white/70 border-l-2 border-accent/40 pl-2">
                   {moment.description}
                 </p>
               </div>
