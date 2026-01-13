@@ -1,4 +1,5 @@
 import React from 'react';
+import { Mail, MessageCircle } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   return (
@@ -16,19 +17,27 @@ export const Contact: React.FC = () => {
           Tenho projetos abertos para novos desafios. Se você tem uma ideia incrível, vamos conversar.
         </p>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+        {/* Botões de contato */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+          
           <a
             href="mailto:unigisele@gmail.com"
-            className="text-2xl md:text-3xl font-bold text-black hover:text-pink-600 transition-colors border-b-2 border-transparent hover:border-pink-600 pb-1"
+            className="flex items-center gap-3 px-8 py-4 border-2 border-pink-600 text-black font-display text-lg uppercase hover:bg-pink-600 hover:text-white transition-colors"
           >
-            unigisele@gmail.com
+            <Mail className="w-5 h-5" />
+            Email
           </a>
 
-          <div className="hidden md:block w-px h-8 bg-black/30"></div>
+          <a
+            href="https://wa.me/5585992563910"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 px-8 py-4 border-2 border-pink-600 text-black font-display text-lg uppercase hover:bg-pink-600 hover:text-white transition-colors"
+          >
+            <MessageCircle className="w-5 h-5" />
+            WhatsApp
+          </a>
 
-          <p className="text-xl md:text-2xl text-black/70 font-display">
-            +55 85 99256-3910
-          </p>
         </div>
       </div>
     </section>
