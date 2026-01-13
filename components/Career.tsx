@@ -69,81 +69,81 @@ const moments: CareerMoment[] = [
     id: 10,
     title: 'International Space Apps Challenge',
     year: '2025',
-    description: 'Hackathon anual global para desenvolver soluções de problemas que há na Terra e no espaço.',
+    description: 'Hackathon anual global para desenvolver soluções.',
     imageUrl: 'https://i.postimg.cc/NfBdKYF7/Grid-Art-20251121-041814741.jpg',
   },
   {
     id: 11,
     title: 'Feira do Conhecimento',
     year: '2025',
-    description: 'Evento de encontros de tecnologia, criatividade e educação do Ceará.',
+    description: 'Evento de tecnologia, criatividade e educação.',
     imageUrl: 'https://i.postimg.cc/kMznC1gW/Grid-Art-20251121-041645080.jpg',
   },
   {
     id: 12,
     title: 'Cocoa Heads Fortaleza',
     year: '2025',
-    description: 'Voltado para o ecossistema de desenvolvimento da Apple.',
+    description: 'Ecossistema de desenvolvimento Apple.',
     imageUrl: 'https://i.postimg.cc/rF7CSkFm/Grid-Art-20251121-025533625-(1).jpg',
   },
 ];
 
 export const Career: React.FC = () => {
-  // Duplicate the array to create a seamless infinite loop
   const carouselItems = [...moments, ...moments];
 
   return (
-    <section id="career" className="py-16 md:py-24 border-b border-dark/80 bg-bg overflow-hidden">
-      
-      {/* Section Header */}
+    <section
+      id="career"
+      className="py-16 md:py-24 border-b border-white/10 bg-black/80 backdrop-blur-xl overflow-hidden"
+    >
+      {/* Header */}
       <div className="container mx-auto px-8 md:px-16 mb-12">
-        <h2 className="font-display text-5xl md:text-6xl uppercase mb-2 text-outline-accent">
+        <h2 className="font-display text-5xl md:text-6xl uppercase mb-2 text-transparent stroke-white">
           Momento
         </h2>
-        <h2 className="font-display text-5xl md:text-6xl uppercase pl-0 md:pl-12">
+        <h2 className="font-display text-5xl md:text-6xl uppercase text-white md:pl-12">
           Carreira
         </h2>
-        <p className="mt-4 text-dark/60 max-w-lg md:pl-12 text-sm font-bold tracking-wider uppercase">
+        <p className="mt-4 text-white/60 max-w-lg md:pl-12 text-sm font-bold tracking-wider uppercase">
           Uma linha do tempo visual da minha jornada
         </p>
       </div>
 
-      {/* Infinite Carousel Track */}
-      <div className="relative w-full flex overflow-hidden py-4">
-        {/* The moving container */}
+      {/* Carousel */}
+      <div className="relative w-full flex overflow-hidden py-6">
         <div className="flex animate-scroll gap-8 md:gap-12 px-8">
           {carouselItems.map((moment, index) => (
-            <div 
-              key={`${moment.id}-${index}`} 
-              className="flex-shrink-0 w-[280px] md:w-[320px] group cursor-default"
+            <div
+              key={`${moment.id}-${index}`}
+              className="flex-shrink-0 w-[280px] md:w-[320px] group"
             >
-              {/* Image Card */}
-              <div className="border border-dark bg-white p-2 mb-4 shadow-[8px_8px_0_0_rgba(26,26,26,1)] group-hover:translate-y-[-4px] group-hover:shadow-[12px_12px_0_0_rgba(129,89,36,1)] transition-all duration-300">
-                <div className="aspect-[5/4] relative overflow-hidden border border-dark/20 bg-dark/5">
-                  <img 
-                    src={moment.imageUrl} 
-                    onError={(e) => {
-                      // Fallback caso a imagem ainda falhe
-                      e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(moment.title)}&background=815924&color=fff&size=512`;
-                    }}
-                    alt={moment.title} 
-                    className="w-full h-full object-cover transition-all duration-500"
+              {/* Card */}
+              <div className="bg-black/50 backdrop-blur-xl border border-white/10 p-2 mb-4 rounded-xl
+                group-hover:-translate-y-2 transition-all duration-300
+                group-hover:border-pink-400/60
+                group-hover:shadow-[0_0_25px_rgba(236,72,153,0.35)]"
+              >
+                <div className="aspect-[5/4] overflow-hidden rounded-lg">
+                  <img
+                    src={moment.imageUrl}
+                    alt={moment.title}
                     loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
 
-              {/* Text Content */}
+              {/* Text */}
               <div className="px-2">
-                <div className="flex justify-between items-baseline gap-2 mb-2">
-                  <h3 className="font-display text-lg uppercase leading-tight group-hover:text-accent transition-colors">
+                <div className="flex justify-between items-baseline mb-2">
+                  <h3 className="font-display text-lg uppercase text-white group-hover:text-pink-400 transition-colors">
                     {moment.title}
                   </h3>
-                  <span className="font-bold text-accent text-lg shrink-0">
+                  <span className="font-bold text-pink-400 text-lg">
                     {moment.year}
                   </span>
                 </div>
-                <p className="text-xs text-dark/70 font-medium leading-relaxed border-l-2 border-accent/30 pl-2">
+                <p className="text-xs text-white/70 leading-relaxed border-l-2 border-pink-400/40 pl-2">
                   {moment.description}
                 </p>
               </div>
