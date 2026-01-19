@@ -24,7 +24,7 @@ export const Portfolio: React.FC = () => {
       <div className="w-full rounded-2xl overflow-hidden border border-black/30 backdrop-blur-xl bg-black/40 shadow-xl">
         <div className="relative w-full h-[75vh] md:h-[85vh]">
           <iframe
-            src="https://even-bramble-15f.notion.site/113cfc4b7293442b9d805babefa3dbe1"
+            src="https://even-bramble-15f.notion.site/Portf-lio-Data-Science-113cfc4b7293442b9d805babefa3dbe1"
             className="absolute inset-0 w-full h-full"
             frameBorder="0"
             loading="lazy"
