@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
         </h1>
 
         <div className="mb-8 font-bold text-lg md:text-xl text-dark uppercase tracking-wide">
-          Ux/Ui Designer • Data Analyst • Low Code
+          Ux/Ui Designer • Ux Reseacher • Data Analyst
         </div>
 
         {/* Bio */}
