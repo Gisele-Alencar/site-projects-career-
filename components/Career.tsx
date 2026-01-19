@@ -87,6 +87,13 @@ const moments: CareerMoment[] = [
     description: 'Voltado para o ecossistema de desenvolvimento da Apple.',
     imageUrl: 'https://i.postimg.cc/rF7CSkFm/Grid-Art-20251121-025533625-(1).jpg',
   },
+  {
+  id: 12,
+    title: 'Dev Fest GDG Fortaleza',
+    year: '2025',
+    description: 'Contribui como voluntaria no evento Google Developer Groups, aonde teve palestras com especialistas na área e networking com outros entusiastas da tecnologia.',
+    imageUrl: 'https://i.postimg.cc/WpYH3263/Grid-Art-20260102-165044113.jpg',
+  },
 ];
 
 export const Career: React.FC = () => {
