@@ -7,6 +7,7 @@ export const About: React.FC = () => {
       <div className="max-w-6xl mx-auto p-8 md:p-16 lg:p-24 flex flex-col justify-center items-center">
         
         <div className="max-w-4xl w-full">
+
           {/* Título */}
           <div className="mb-12 text-left">
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl uppercase mb-2 text-outline-accent">
@@ -30,11 +31,11 @@ export const About: React.FC = () => {
 
             {/* Organização */}
             <div className="bg-white border-2 border-pink-400 p-6 shadow-[4px_4px_0_0_rgba(236,72,153,0.6)] hover:translate-y-[-4px] transition-transform">
-              <Users className="w-8 h-8 text-pink-400 mb-4" />
+              <Users className="w-8 h-8 text-black mb-4" />
               <h3 className="font-display text-xl mb-2 text-pink-500 uppercase">
                 Organização
               </h3>
-              <p className="text-sm text-pink-400/80 font-medium">
+              <p className="text-sm text-black/80 font-medium">
                 Atuação na organização de eventos e meetups, aproximando iniciantes e profissionais da área.
                 Contribuindo para que mais pessoas tenham oportunidades, conhecimento e conexões na área de tecnologia.
               </p>
@@ -42,11 +43,11 @@ export const About: React.FC = () => {
 
             {/* Network */}
             <div className="bg-white border-2 border-pink-400 p-6 shadow-[4px_4px_0_0_rgba(236,72,153,0.6)] hover:translate-y-[-4px] transition-transform">
-              <Heart className="w-8 h-8 text-pink-400 mb-4" />
+              <Heart className="w-8 h-8 text-black mb-4" />
               <h3 className="font-display text-xl mb-2 text-pink-500 uppercase">
                 Network
               </h3>
-              <p className="text-sm text-pink-400/80 font-medium">
+              <p className="text-sm text-black/80 font-medium">
                 Compartilho ideias, experiências e conteúdos que fortalecem a troca dentro das comunidades.
                 Com o aprendizado coletivo para abrir caminhos, gerar colaboração e apoiar o crescimento
                 profissional de quem está começando.
@@ -55,11 +56,11 @@ export const About: React.FC = () => {
 
             {/* Eventos */}
             <div className="bg-white border-2 border-pink-400 p-6 shadow-[4px_4px_0_0_rgba(236,72,153,0.6)] hover:translate-y-[-4px] transition-transform">
-              <Mic className="w-8 h-8 text-pink-400 mb-4" />
+              <Mic className="w-8 h-8 text-black mb-4" />
               <h3 className="font-display text-xl mb-2 text-pink-500 uppercase">
                 Eventos
               </h3>
-              <p className="text-sm text-pink-400/80 font-medium">
+              <p className="text-sm text-black/80 font-medium">
                 Contribuo com ideias, planejamento e apoio na execução de eventos que fortalecem a comunidade tech,
                 ajudando a criar encontros e rodas de conversa com o intuito de compartilhar conhecimento e tecnologia.
               </p>
